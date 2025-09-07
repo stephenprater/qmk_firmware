@@ -23,10 +23,10 @@
 #    define RGBLED_NUM 64
 #    define RGBLED_SPLIT { 32, 32 }
 #    define RGBLIGHT_SPLIT
-#    define RGBLIGHT_LIMIT_VAL 100 // LED Brightness, high power draw may exceed the USB limitations of 0.6A and cause a crash.    
-#    define RGBLIGHT_HUE_STEP  10    
-#    define RGBLIGHT_SAT_STEP  17    
-#    define RGBLIGHT_VAL_STEP  17    
+#    define RGBLIGHT_LIMIT_VAL 50 // LED Brightness, high power draw may exceed the USB limitations of 0.6A and cause a crash.
+#    define RGBLIGHT_HUE_STEP  10
+#    define RGBLIGHT_SAT_STEP  17
+#    define RGBLIGHT_VAL_STEP  17
 
 #    define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL+2
 
@@ -41,7 +41,7 @@
 #    define RGBLIGHT_EFFECT_CHRISTMAS
 
 
-// RGB LED Conversion macro from physical array to electric array. This results in better looking animated effects.    
+// RGB LED Conversion macro from physical array to electric array. This results in better looking animated effects.
 #    define LED_LAYOUT( \
       /* LED matrix */ \
       L01, L02, L03, L04, L05, L06,                        L011, L012, L013, L014, L015, L016, \
@@ -57,11 +57,11 @@
   }
 #    define RGBLIGHT_LED_MAP LED_LAYOUT( \
     /* animation order. */ \
-      4,  8, 12, 17, 22, 27,                   40, 45, 50, 54, 58, 62, \
-      3,  7, 11, 16, 21, 26,                   39, 44, 49, 53, 57, 61, \
-  0,  2,  6, 10, 15, 20, 25,                   38, 43, 48, 52, 56, 60, 63, \
-      1,  5,  9, 14, 19, 24, 29, 31,   33, 35, 37, 42, 47, 51, 55, 59, \
-                 13, 18, 23, 28, 30,   32, 34, 36, 41, 46 )
+      1 , 2 , 3 , 4 , 5 , 6 ,                   7 , 8 , 9 , 10, 11, 12, \
+      13, 14, 15, 16, 17, 18,                   19, 20, 21, 22, 23, 24, \
+  25, 26, 27, 28, 28, 30, 31,                   32, 33, 34, 35, 36, 37, 38, \
+      39, 40, 41, 42, 43, 44, 45, 46,   47, 48, 49, 50, 51, 52, 53, 54, \
+                  55, 56, 57, 58, 59,   60, 61, 62, 63, 64 )
 #endif
 
 #ifdef OLED_ENABLE
